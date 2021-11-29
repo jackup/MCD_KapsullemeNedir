@@ -26,6 +26,17 @@ namespace MCD_KapsullemeNedir
             //1.Field değer ataması yapılmasın ama değer okunabilsin
             //C1.ID = 10; // Çalışmaz
             Console.WriteLine("Müşteri Id Değeri: " + C1.ID.ToString());
+
+
+            //İsim ve soyisim [soyisim] = set
+            //email adresi .....
+            //email get yakup.komuk@hotmail.com
+            //set private
+            C1.name = "Yakup";
+            C1.Surname = "Kömük";
+            C1.Tck = "10196456338";
+            Console.WriteLine(C1.Tck);
+            Console.WriteLine(C1.EmailAddress);
         }
     }
 }

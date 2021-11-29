@@ -31,6 +31,16 @@ namespace MCD_KapsullemeNedir
         }
         public string name, surname;
 
+        public string Surname
+        {
+            get { return this.surname; }
+            set
+            {
+                this.surname = value;
+                this.emailAddress = string.Format("{0}.{1}@hotmail.com", name, surname);
+            }
+        }
+
         //Class => Property
         private string emailAddress;
         public string EmailAddress 
@@ -48,6 +58,49 @@ namespace MCD_KapsullemeNedir
             }
         
         }
+
+        private int koko { get; set; }
+
+        //Ara Odev
+        private string tck;
+        public string Tck
+        {
+            set
+            {
+                if (value.Length == 11)
+                {
+                    bool flag = false;
+                    for (int i = 0; i < value.Length; i++)
+                    {
+                        bool characterCheck = char.IsNumber(value[i]);
+                        if (characterCheck)
+                        {
+                            //sayısal değer demektir.
+                        }
+                        else
+                        {
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if (flag)
+                    {
+                        Console.WriteLine("TC Kimlik numarası içerisindeki değerler sayısal olmalıdır!");
+                    }
+                    else
+                    {
+                        this.tck = value;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("TC Kimlik numarası 11 haneli olmalıdır!");
+                }
+            }
+            get { return tck.Substring(0, 3); }
+            
+        }
+
 
         private int CreateId()
         {
