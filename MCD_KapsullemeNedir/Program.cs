@@ -21,6 +21,11 @@ namespace MCD_KapsullemeNedir
             //Genel olarak kapsülleme konusuna giriş yaptık.
             C1.EmailAddress = "yk.58@hotmail.com";
             Console.WriteLine(C1.EmailAddress);
+
+
+            //1.Field değer ataması yapılmasın ama değer okunabilsin
+            //C1.ID = 10; // Çalışmaz
+            Console.WriteLine("Müşteri Id Değeri: " + C1.ID.ToString());
         }
     }
 }

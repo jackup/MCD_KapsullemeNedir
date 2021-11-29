@@ -10,6 +10,25 @@ namespace MCD_KapsullemeNedir
     {
         //Class => Field
         int id;
+
+        public Client()
+        {
+            this.id = CreateId();
+        }
+
+        
+
+        public int ID
+        {
+            get
+            {
+                return this.id;
+            }
+            private set
+            {
+                this.id = value;
+            }
+        }
         public string name, surname;
 
         //Class => Property
@@ -29,5 +48,19 @@ namespace MCD_KapsullemeNedir
             }
         
         }
+
+        private int CreateId()
+        {
+            Random rnd = new Random();
+            return rnd.Next(10000, 90000);
+        }
     }
 }
+
+
+
+
+
+
+
+
